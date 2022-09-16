@@ -75,7 +75,7 @@ class Counter extends Component {
       <div>
         {/* another way of getting children */}
         {/* {this.props.children} */}
-        <h5>Counter# {this.props.id}</h5>
+        <h5>Item # {this.props.counter.id}</h5>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           //   onClick={this.handleIncrement}

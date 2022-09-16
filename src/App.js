@@ -2,6 +2,9 @@ import "./App.css";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
 import React, { Component } from "react";
+import ProgressComp from "./components/ProgressComp";
+import SortList from "./components/SortList";
+import Products from "./components/Products"
 
 class App extends Component {
   state = {
@@ -54,7 +57,11 @@ class App extends Component {
     console.log('App - Rendered');
   return (
     <React.Fragment>
-      <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />
+      <ProgressComp/>
+      <SortList/>
+      <Products/>
+      {/* <ProgressComp/> */}
+      {/* <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />
       <main className="container">
         <Counters
           counters={this.state.counters}
@@ -63,7 +70,7 @@ class App extends Component {
           onDelete={this.handleDelete}
 
         />
-      </main>
+      </main> */}
     </React.Fragment>
   );
 }
